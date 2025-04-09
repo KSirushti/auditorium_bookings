@@ -1,0 +1,53 @@
+.pro-login-page {
+    background-color: #f7f7fc;
+    min-height: 100vh;
+  }
+  
+  .pro-login-form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .login-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4a2d8b;
+  }
+  
+  .pro-login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .pro-login-form label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .pro-login-form input {
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .pro-login-form button {
+    background-color: #4a2d8b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .error-message {
+    margin-top: 1rem;
+    color: red;
+    text-align: center;
+  }
+  

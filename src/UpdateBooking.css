@@ -1,0 +1,132 @@
+.booking-page {
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    padding-top: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .booking-form-container {
+    max-width: 600px;
+    background: white;
+    margin: 0 auto;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-title {
+    text-align: center;
+    font-size: 1.75rem;
+    color: #4b0082;
+    margin-bottom: 1.5rem;
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .booking-form label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+    color: #333;
+  }
+  
+  .booking-form input,
+  .booking-form select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    font-size: 1rem;
+  }
+  
+  .booking-form button {
+    margin-top: 1.2rem;
+    padding: 10px;
+    background-color: #4b0082;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .booking-form button:hover {
+    background-color: #360062;
+  }
+  
+  .booking-message {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: #2e7d32;
+  }
+  
+  .calendar-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  
+  .calendar-controls select,
+  .calendar-controls input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .year-input {
+    width: 100px;
+  }
+
+  .update-delete-title {
+    text-align: center;
+    color: #4b0082;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .update-delete-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .update-delete-controls select,
+  .update-delete-controls input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 120px;
+  }
+  
+  .booking-selector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .booking-selector label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .booking-selector select {
+    padding: 10px 12px;
+    font-size: 1rem;
+    width: 260px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  

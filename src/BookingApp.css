@@ -1,0 +1,126 @@
+.booking-table-page {
+    padding: 2rem;
+    background: #f3f4f8;
+    min-height: 100vh;
+  }
+  
+  .calendar-title {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  
+  .booking-table th,
+  .booking-table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .booking-table th {
+    background-color: #e5e5ff;
+    color: #333;
+    text-align: center;
+  }
+  
+  .booking-table td {
+    background-color: white;
+  }
+  
+  .booking-table tr:nth-child(even) {
+    background-color: #f9f9ff;
+  }
+  
+  /* Optional color hints */
+  .morning {
+    background-color: #fffbe6;
+  }
+  
+  .afternoon {
+    background-color: #e0ffe6;
+  }
+  
+  .evening {
+    background-color: #f3e8ff;
+  }
+  
+  .remarks {
+    font-weight: bold;
+    background-color: #fff6ff;
+  }
+  
+
+  .booking-table th:nth-child(1),
+.booking-table td:nth-child(1) {
+  width: 60px; /* Date column */
+  text-align: center;
+}
+
+.booking-table th:nth-child(2),
+.booking-table td:nth-child(2) {
+  width: 80px; /* Day column */
+  text-align: center;
+}
+
+.calendar-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calendar-controls select,
+  .calendar-controls .year-input {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+  }
+  
+  .approved-fd {
+    background-color: #ffd700; /* Gold */
+    padding: 4px;
+    border-radius: 4px;
+  }
+  
+  .approved-fn {
+    background-color: #90ee90; /* Light green */
+    padding: 4px;
+    border-radius: 4px;
+  }
+  
+  .approved-an {
+    background-color: #add8e6; /* Light blue */
+    padding: 4px;
+    border-radius: 4px;
+  }
+  
+  .approved-es {
+    background-color: #dda0dd; /* Plum */
+    padding: 4px;
+    border-radius: 4px;
+  }
+  
+  .pending {
+    background-color: #ffb6b6; /* Light red */
+    padding: 4px;
+    border-radius: 4px;
+  }
+  

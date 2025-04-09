@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.welcome-page {
   min-height: 100vh;
+  background-color: #6a0dad;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
   color: white;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.welcome-content {
+  max-width: 650px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes App-logo-spin {
+.welcome-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.start-button {
+  margin-top: 2rem;
+  background-color: white;
+  color: #6a0dad;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.start-button.clicked {
+  transform: scale(0.95);
+  background-color: #e0d3fc;
+}
+
+.start-button:hover {
+  background-color: #e0d3fc;
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }

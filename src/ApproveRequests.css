@@ -1,0 +1,54 @@
+.approve-page {
+    background-color: #f5f6ff;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+  
+  .approve-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #4b00a8;
+    margin-bottom: 2rem;
+  }
+  
+  .approve-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .approve-table th,
+  .approve-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .approve-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+  
+  .reject-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .no-requests {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
