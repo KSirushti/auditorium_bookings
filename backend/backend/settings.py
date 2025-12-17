@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'auditorium_booking',
         'USER': 'root',
-        'PASSWORD': 'KSirushti@29',
+        'PASSWORD': ' ',
         'HOST': 'localhost',
         'PORT': '3306',
     }
