@@ -4,3 +4,4 @@ mysqlclient
 python-dotenv
 pymysql
 djangorestframework
+django-cors-headers
