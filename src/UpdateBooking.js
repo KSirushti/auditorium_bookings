@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "./api";
 import "./AddBooking.css";
 
 const UpdateBooking = () => {
@@ -30,7 +30,8 @@ const UpdateBooking = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/bookings/");
+        const res = await api.get("/api/bookings/");
+
         const filtered = res.data.filter((b) => {
           const d = new Date(b.date);
           return d.getMonth() === month && d.getFullYear() === year;
@@ -66,7 +67,7 @@ const UpdateBooking = () => {
     if (!selectedBookingId) return;
 
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/bookings/${selectedBookingId}/`, {
+      await api.patch(`/api/bookings/${selectedBookingId}/`, {
         ...form,
         status: "PENDING", // Triggers PRO approval again
       });
