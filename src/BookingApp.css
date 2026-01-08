@@ -123,4 +123,36 @@
     padding: 4px;
     border-radius: 4px;
   }
-  
+
+
+  /* Morning only */
+.slot-morning {
+  background-color: #fff3b0; /* soft yellow */
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Afternoon only */
+.slot-afternoon {
+  background-color: #e6d9ff; /* light purple */
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Morning + Afternoon (Full Day) */
+.slot-full {
+  background-color: #cce7ff; /* sky blue */
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Evening only */
+.slot-evening {
+  background-color: #b9f6ca; /* green */
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
