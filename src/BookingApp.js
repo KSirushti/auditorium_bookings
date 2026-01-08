@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import axios from "axios";
+import api from "./api";
 import "./BookingApp.css";
 
 const dayNames = ["SUN", "MON", "TUES", "WED", "THUR", "FRI", "SAT"];
@@ -11,9 +11,7 @@ const BookingApp = () => {
 
   const fetchBookings = useCallback(async () => {
     try {
-      const response = await axios.get(
-        "http://127.0.0.1:8000/api/bookings/"
-      );
+      const response = await api.get("/api/bookings/");
 
       // ✅ ONLY APPROVED BOOKINGS
       const bookings = response.data.filter(
