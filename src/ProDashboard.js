@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ProDashboard.css";
+import AddUser from "./AddUser";
 
 const ProDashboard = () => {
   const [requests, setRequests] = useState([]);
+  const [showAddUser, setShowAddUser] = useState(false);
 
   useEffect(() => {
     fetchRequests();
@@ -44,6 +46,16 @@ const ProDashboard = () => {
   return (
     <div className="pro-dashboard">
       <h2 className="dashboard-title">PRO Dashboard – Approve Bookings</h2>
+
+      <button
+        className="add-user-toggle"
+        onClick={() => setShowAddUser(!showAddUser)}
+      >
+        {showAddUser ? "Hide User Form" : "Add New User"}
+      </button>
+
+      {showAddUser && <AddUser />}
+
       {requests.length === 0 ? (
         <p className="no-requests">No pending requests.</p>
       ) : (
