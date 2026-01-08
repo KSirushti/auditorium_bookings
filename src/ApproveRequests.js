@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "./api";
 import Navbar from "./Navbar";
 import "./ApproveRequests.css";
 
@@ -12,7 +12,7 @@ const ApproveRequests = () => {
 
   const fetchBookings = async () => {
     try {
-      const response = await axios.get("http://127.0.0.1:8000/api/bookings/");
+      const response = await api.get("/api/bookings/");
       setBookings(response.data);
     } catch (err) {
       console.error("Error fetching bookings:", err);
@@ -21,7 +21,7 @@ const ApproveRequests = () => {
 
   const handleAction = async (id, newStatus) => {
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/bookings/${id}/`, {
+      await api.patch(`/api/bookings/${id}/`, {
         status: newStatus,
       });
       fetchBookings(); // Refresh after action
