@@ -1,0 +1,64 @@
+.add-user-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px 40px;
+  background-color: #f9f9ff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.add-user-container h2 {
+  text-align: center;
+  color: #3c2fa1;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.add-user-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.add-user-form label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.add-user-form input,
+.add-user-form select {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.add-user-form button {
+  grid-column: span 2;
+  padding: 12px;
+  background-color: #4729a0;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-user-form button:hover {
+  background-color: #361d7a;
+}
+
+.user-message {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #4caf50;
+}
