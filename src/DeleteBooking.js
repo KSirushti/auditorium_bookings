@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "./api";
 import "./DeleteBooking.css";
 
 const DeleteBooking = () => {
@@ -17,7 +17,7 @@ const DeleteBooking = () => {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/bookings/");
+      const res = await api.get("/api/bookings/");
       setBookings(res.data);
     } catch (err) {
       console.error("Error fetching bookings", err);
@@ -27,12 +27,12 @@ const DeleteBooking = () => {
   const handleDelete = async () => {
     if (!selectedBookingId) return;
     try {
-      await axios.delete(`http://127.0.0.1:8000/api/bookings/${selectedBookingId}/`);
-      setMessage("✅ Booking deleted successfully.");
+      await api.delete(`/api/bookings/${selectedBookingId}/`);
+      setMessage("Booking deleted successfully.");
       setSelectedBookingId("");
       fetchBookings();
     } catch (err) {
-      setMessage("❌ Failed to delete booking.");
+      setMessage("Failed to delete booking.");
     }
   };
 
