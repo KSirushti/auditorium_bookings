@@ -3,6 +3,8 @@ import axios from "axios";
 import "./ProDashboard.css";
 import AddUser from "./AddUser";
 
+const API_BASE = process.env.REACT_APP_API_URL;
+
 const ProDashboard = () => {
   const [requests, setRequests] = useState([]);
   const [showAddUser, setShowAddUser] = useState(false);
@@ -13,7 +15,7 @@ const ProDashboard = () => {
 
   const fetchRequests = async () => {
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/bookings/");
+      const res = await axios.get(`${API_BASE}/api/bookings/`);
       const pending = res.data.filter((req) => req.status === "PENDING");
       setRequests(pending);
     } catch (err) {
@@ -23,7 +25,7 @@ const ProDashboard = () => {
 
   const handleApprove = async (bookingId) => {
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/bookings/${bookingId}/`, {
+      await axios.patch(`${API_BASE}/api/bookings/${bookingId}/`, {
         status: "APPROVED",
       });
       fetchRequests();
@@ -34,7 +36,7 @@ const ProDashboard = () => {
 
   const handleReject = async (bookingId) => {
     try {
-      await axios.patch(`http://127.0.0.1:8000/api/bookings/${bookingId}/`, {
+      await axios.patch(`${API_BASE}/api/bookings/${bookingId}/`, {
         status: "REJECTED",
       });
       fetchRequests();
