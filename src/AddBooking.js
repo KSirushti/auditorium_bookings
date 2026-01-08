@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import api from "./api";
 import "./AddBooking.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -43,7 +43,7 @@ const AddBooking = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/bookings/");
+        const res = await api.get("/api/bookings/");
         setAllBookings(res.data);
       } catch (err) {
         console.error("Error fetching bookings:", err);
@@ -82,7 +82,7 @@ const AddBooking = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:8000/api/bookings/", form);
+      await api.post("/api/bookings/", form);
       setMessage("✅ Booking submitted successfully!");
     } catch (err) {
       setMessage(err.response?.data?.non_field_errors?.[0] || "❌ Booking failed.");
