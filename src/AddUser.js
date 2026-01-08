@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "./api";
 import "./AddUser.css";
 
 const AddUser = () => {
@@ -21,7 +21,7 @@ const AddUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:8000/api/users/", user);
+      await api.post("/api/users/", user);
       setMessage("✅ User added successfully!");
       setUser({
         name: "",
